@@ -51,6 +51,35 @@ select {
 }
 /* reset */
 
-h1 {
+body {
+  width: 100%;
+  display: flex;
+}
+
+.navigation {
   background-color: red;
+  flex: 1;
+}
+
+.main-window {
+  background-color: green;
+  flex: 2;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.canvas {
+  max-width: 400px;
+  max-height: 400px;
+  background-color: blue;
+  overflow: hidden;
 }
