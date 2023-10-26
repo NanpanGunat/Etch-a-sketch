@@ -78,9 +78,8 @@ body {
 }
 
 .canvas {
-  width: 500px;
-  height: 500px;
-  background-color: blue;
+  width: 520px;
+  height: 520px;
   overflow: hidden;
 }
 

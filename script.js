@@ -1,8 +1,9 @@
-const restartBtn = document.querySelector(".restart");
 const slider = document.querySelector(".slider");
+const restartBtn = document.querySelector(".restart");
 const colorPicker = document.querySelector(".color_picker");
 const squareContainer = document.querySelector(".container");
 const showGridBtn = document.querySelector(".show_grid_btn");
+const pixelColor = document.querySelector(".background_color");
 
 // Grid
 function toggleGrid() {
@@ -29,7 +30,6 @@ function updateBtnText() {
 }
 
 // restart btn
-console.log(restartBtn);
 restartBtn.addEventListener("click", (e) => {
   clearCanvas();
   generateCanvas(slider.value);
@@ -41,8 +41,14 @@ function changeColor(element, color = colorPicker.value) {
   element.target.style.backgroundColor = color;
 }
 
+function changeBackground() {
+  const pixelList = document.querySelectorAll(".pixel");
+  pixelList.forEach((e) => (e.style.backgroundColor = pixelColor.value));
+}
+
+pixelColor.addEventListener("input", changeBackground);
 // Create pixels
-function createPixel(width, color = "white") {
+function createPixel(width, color = pixelColor.value) {
   const div = document.createElement("div");
   div.classList = "pixel";
   div.style.cssText = `width:${width}px;
