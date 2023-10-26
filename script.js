@@ -1,3 +1,4 @@
+const restartBtn = document.querySelector(".restart");
 const slider = document.querySelector(".slider");
 const colorPicker = document.querySelector(".color_picker");
 const squareContainer = document.querySelector(".container");
@@ -26,6 +27,14 @@ function updateBtnText() {
     ? (showGridBtn.textContent = "Hide Gird")
     : (showGridBtn.textContent = "Show Gird");
 }
+
+// restart btn
+console.log(restartBtn);
+restartBtn.addEventListener("click", (e) => {
+  clearCanvas();
+  generateCanvas(slider.value);
+  toggleGrid();
+});
 
 // Color
 function changeColor(element, color = colorPicker.value) {
