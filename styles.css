@@ -57,12 +57,12 @@ body {
 }
 
 .navigation {
-  background-color: red;
+  background-color: #ad765a;
   flex: 0.6;
 }
 
 .main-window {
-  background-color: green;
+  background-color: #474341;
   flex: 2;
 
   display: flex;
@@ -85,4 +85,11 @@ body {
 
 .grid {
   border: 0.1px solid black;
+}
+
+.color {
+  all: unset;
+  display: block;
+  height: 100px;
+  width: 100px;
 }
